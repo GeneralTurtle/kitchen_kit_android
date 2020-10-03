@@ -18,12 +18,8 @@ jobs:
         java-version: 1.8
     - name: Unit tests
       run: bash ./gradlew test --stacktrace
-    - name: Publish Unit Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v1.2
-      if: always()
+    - name: Upload Tests Results
+      uses: actions/upload-artifact@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        check_name: Unit Test Results
-        files: app/build/test-results/**/*.xml
-        report_individual_runs: true
-        deduplicate_classes_by_file_name: false
+        name: Tests resuslts
+        path: app/build/reports/
