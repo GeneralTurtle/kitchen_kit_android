@@ -22,6 +22,7 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v1.2
       if: always()
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         check_name: Unit Test Results
         files: app/build/test-results/**/*.xml
         report_individual_runs: true
