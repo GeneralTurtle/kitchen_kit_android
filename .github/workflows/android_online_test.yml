@@ -19,4 +19,4 @@ jobs:
     - name: Move to folder
       run: cd app
     - name: Unit tests
-      run: .\gradlew test --stacktrace
+      run: .\gradlew.bat test --stacktrace
