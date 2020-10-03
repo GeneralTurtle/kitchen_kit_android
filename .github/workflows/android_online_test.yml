@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     name: Run Tests
-    runs-on: ubuntu-18.04
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -17,6 +17,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Move to folder
-      run: ls; cd app; ls
+      run: cd app
     - name: Unit tests
-      run: bash ./gradlew test --stacktrace
+      run: .\gradlew test --stacktrace
