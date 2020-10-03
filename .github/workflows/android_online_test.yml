@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    name: Run Build and Tests
+    name: Run Tests
     runs-on: ubuntu-18.04
 
     steps:
@@ -16,5 +16,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Unit tests
-      run: bash ./app/gradlew clean build --stacktrace
+    - name: Move to folder
+      run: bash cd ./app
+    - name: Tests
+      run: bash ./gradlew test --stacktrace
