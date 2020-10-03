@@ -18,3 +18,5 @@ jobs:
         java-version: 1.8
     - name: Move to folder
       run: ls; cd app; ls
+    - name: Unit tests
+      run: bash ./gradlew test --stacktrace
