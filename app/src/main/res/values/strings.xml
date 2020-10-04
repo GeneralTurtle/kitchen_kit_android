@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Kitchen Kit</string>
+    <string name="temperature_button">temperature</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius_symbol">°C</string>
+    <string name="fahrenheit_symbol">°F</string>
+    <string name="default_result">RESULT</string>
+    <string name="convert_display">Convert</string>
+    <string name="default_temperature_input">0.0</string>
 </resources>
